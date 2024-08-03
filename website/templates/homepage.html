@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Chủ - Bệnh Viện ABC</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='homepage.css') }}"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="container">
+        <a href="{{ url_for('views.homepage', user_id=current_user.user_id) }}"
+          ><img
+            src="../static/logo_hospital.png"
+            alt="Logo"
+            style="height: 50px"
+        /></a>
+        <nav>
+          <a
+            class="nav-item nav-link"
+            id="home"
+            href="{{ url_for('views.homepage', user_id=current_user.user_id) }}"
+            >Trang chủ</a
+          >
+          <a href="#services">Dịch Vụ</a>
+          <a href="#doctors">Đội Ngũ Bác Sĩ</a>
+          <a href="#bookService">Đặt lịch khám</a>
+          <a href="/login">Đăng Nhập/Đăng Ký</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Phần Hero -->
+    <div class="hero">
+      <h1>Chào Mừng Đến Với Bệnh Viện ABC</h1>
+      <p>Chăm sóc sức khỏe hàng đầu cho bạn và gia đình</p>
+      <a href="#contact" class="cta-button">Đặt Lịch Khám Ngay</a>
+    </div>
+
+    <!-- Giới Thiệu -->
+    <div class="section" id="about">
+      <h2>Về Chúng Tôi</h2>
+      <p>
+        Chúng tôi cung cấp dịch vụ chăm sóc sức khỏe toàn diện với đội ngũ bác
+        sĩ chuyên nghiệp và cơ sở vật chất hiện đại.
+      </p>
+    </div>
+
+    <!-- Dịch Vụ -->
+    <div class="section" id="services">
+      <h2>Dịch Vụ Của Chúng Tôi</h2>
+      <div class="services">
+        <div class="service">
+          <h3>Khám Chuyên Khoa</h3>
+          <p>Khám và chẩn đoán các bệnh lý chuyên khoa.</p>
+        </div>
+        <div class="service">
+          <h3>Phẫu Thuật</h3>
+          <p>Phẫu thuật các loại bệnh với công nghệ tiên tiến.</p>
+        </div>
+        <div class="service">
+          <h3>Chăm Sóc Sức Khỏe</h3>
+          <p>
+            Dịch vụ chăm sóc sức khỏe toàn diện và theo dõi sức khỏe định kỳ.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Đội Ngũ Bác Sĩ -->
+    <div class="section" id="doctors">
+      <h2>Đội Ngũ Bác Sĩ</h2>
+      <div class="doctors">
+        <div class="doctor">
+          <h3>Bác Sĩ Nguyễn Văn A</h3>
+          <p>Bác sĩ chuyên khoa nội tiết.</p>
+        </div>
+        <div class="doctor">
+          <h3>Bác Sĩ Trần Thị B</h3>
+          <p>Bác sĩ chuyên khoa tim mạch.</p>
+        </div>
+        <div class="doctor">
+          <h3>Bác Sĩ Lê Văn C</h3>
+          <p>Bác sĩ chuyên khoa phẫu thuật.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tin Tức -->
+    <div class="section" id="news">
+      <h2>Tin Tức Mới Nhất</h2>
+      <div class="news">
+        <div class="news-item">
+          <h3>Khám Phá Công Nghệ Mới Trong Y Học</h3>
+          <p>
+            Chúng tôi vừa đưa vào sử dụng thiết bị y tế mới giúp cải thiện chẩn
+            đoán bệnh.
+          </p>
+        </div>
+        <div class="news-item">
+          <h3>Chương Trình Khuyến Mãi Đặc Biệt</h3>
+          <p>Giảm giá 20% cho các dịch vụ khám bệnh định kỳ trong tháng này.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Liên Hệ -->
+    <div class="section" id="contact">
+      <h2>Liên Hệ Chúng Tôi</h2>
+      <p>Địa chỉ: Số 1 Đại Cồ Việt, Quận Hai Bà Trưng, Thành phố Hà Nội</p>
+      <p>Điện thoại: (012) 345-6789</p>
+      <p>Email: contact@benhvienabc.vn</p>
+    </div>
+
+    <!-- Chân Trang -->
+    <div class="footer">
+      <p>&copy; 2024 Bệnh Viện ABC. Tất cả quyền được bảo lưu.</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+body {
+  background-color: #f8f9fa;
+}
+.profile-card {
+  background-color: #6cd2ec;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.profile-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.contact-info,
+.education,
+.activities {
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.contact-info {
+  background-color: #6cd2ec;
+  color: rgb(247, 245, 245);
+}
+.education,
+.activities {
+  background-color: #e2e4e5;
+  color: black;
+}
+.education p,
+.activities ul li {
+  color: black;
+}
+.contact-info h5,
+.education h5,
+.activities h5 {
+  margin-bottom: 20px;
+}
+.activities ul {
+  list-style: none;
+  padding-left: 0;
+}
+.activities ul li {
+  margin-bottom: 10px;
+}
+.activities ul li span {
+  display: block;
+  font-size: 0.9em;
+  color: black;
+}
+
+.service-box {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-box h5 {
+  margin-bottom: 20px;
+}
+
+.btn-custom {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  margin: 0 5px; /* Adjust this value to control the spacing between buttons */
+}
+
+.btn-custom:hover {
+  background-color: #e9ecef;
+  border-color: #ccc;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}

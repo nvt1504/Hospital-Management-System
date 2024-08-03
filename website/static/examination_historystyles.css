@@ -1,0 +1,26 @@
+.table {
+  font-size: 0.875em; /* Adjust this value as needed */
+  width: 100%; /* Make the table wider */
+}
+
+/* Add vertical borders between columns */
+.table th,
+.table td {
+  border-left: 1px solid #dee2e6; /* Adjust border color if needed */
+}
+
+/* Remove left border for the first column */
+.table th:first-child,
+.table td:first-child {
+  border-left: none;
+}
+
+/* Additional styling for the navigation bar */
+.navbar-nav .nav-item .nav-link {
+  margin-right: 10px; /* Adjust space between links */
+}
+
+/* Style the container for better layout */
+.container {
+  margin-top: 20px; /* Add top margin to the container */
+}

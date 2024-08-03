@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Lịch Khám Bệnh</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='booking.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h3>Đăng Ký Lịch Khám Bệnh</h3>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="fullName">Họ và Tên</label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Nhập họ và tên" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Nhập email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Số Điện Thoại</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Nhập số điện thoại" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="date">Ngày Khám</label>
+                                <input type="date" class="form-control" id="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Giờ Khám</label>
+                                <input type="time" class="form-control" id="time" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="doctor">Chọn Bác Sĩ</label>
+                                <select class="form-control" id="doctor" required>
+                                    <option value="">Chọn bác sĩ</option>
+                                    <option value="dr_nguyen">Bác sĩ Nguyễn Văn A</option>
+                                    <option value="dr_tran">Bác sĩ Trần Thị B</option>
+                                    <option value="dr_le">Bác sĩ Lê Văn C</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="notes">Ghi Chú</label>
+                                <textarea class="form-control" id="notes" rows="3" placeholder="Nhập ghi chú (nếu có)"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Đăng Ký</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
