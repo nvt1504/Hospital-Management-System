@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Chủ - Bệnh Viện ABC</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='homepage.css') }}"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+    <style></style>
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="navbar">
+      <div class="container">
+        <a href="{{ url_for('views.homepage', user_id=current_user.user_id) }}">
+          <img
+            src="../static/logo_hospital.png"
+            alt="Logo"
+            style="height: 50px"
+          />
+        </a>
+        <nav class="d-flex align-items-center">
+          <a
+            class="nav-item nav-link"
+            id="home"
+            href="{{ url_for('views.homepage', user_id=current_user.user_id) }}"
+            >Trang chủ</a
+          >
+          <a class="nav-item nav-link" href="#services">Dịch Vụ</a>
+          <a class="nav-item nav-link" href="#doctors">Đội Ngũ Bác Sĩ</a>
+          <a class="nav-item nav-link" href="#bookService">Đặt lịch khám</a>
+          <a class="nav-item nav-link" href="/login">Đăng Nhập/Đăng Ký</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Phần Hero -->
+    <div class="hero" data-aos="fade-up">
+      <h1>Chào Mừng Đến Với Bệnh Viện ABC</h1>
+      <p>Chăm sóc sức khỏe hàng đầu cho bạn và gia đình</p>
+      <a href="#contact" class="cta-button">Đặt Lịch Khám Ngay</a>
+    </div>
+
+    <!-- Giới thiệu -->
+    <div class="section" id="about" data-aos="fade-up">
+      <h2>Về Chúng Tôi</h2>
+      <p>
+        Bệnh viện ABC là một trong những cơ sở y tế hàng đầu, với đội ngũ bác sĩ
+        chuyên nghiệp và các trang thiết bị hiện đại. Chúng tôi cam kết mang đến
+        dịch vụ chăm sóc sức khỏe tốt nhất cho mọi bệnh nhân.
+      </p>
+    </div>
+
+    <!-- Dịch Vụ -->
+    <div class="section" id="services" data-aos="fade-up">
+      <h2>Các Dịch Vụ Của Chúng Tôi</h2>
+      <div class="service-list">
+        <p>Khám và điều trị bệnh nội trú và ngoại trú</p>
+        <p>Phẫu thuật chuyên sâu</p>
+        <p>Khám sức khỏe định kỳ</p>
+        <p>Xét nghiệm y học hiện đại</p>
+        <p>Chăm sóc sức khỏe tại nhà</p>
+      </div>
+    </div>
+
+    <!-- Đội Ngũ Bác Sĩ -->
+    <div class="section" id="doctors" data-aos="fade-up">
+      <h2>Đội Ngũ Bác Sĩ</h2>
+      <div id="doctorCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-center">
+              <div class="doctor-card">
+                <img
+                  src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_640.png"
+                  alt="Liam Smith"
+                />
+                <h3>Liam Smith</h3>
+                <p>Emergency Department (ED)</p>
+              </div>
+              <div class="doctor-card">
+                <img
+                  src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_640.png"
+                  alt="Olivia Johnson"
+                />
+                <h3>Olivia Johnson</h3>
+                <p>Inpatient Department (IP)</p>
+              </div>
+              <div class="doctor-card">
+                <img
+                  src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_640.png"
+                  alt="Elijah Moore"
+                />
+                <h3>Elijah Moore</h3>
+                <p>Outpatient Department (OPD)</p>
+              </div>
+              <div class="doctor-card">
+                <img
+                  src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_640.png"
+                  alt="Charlotte White"
+                />
+                <h3>Charlotte White</h3>
+                <p>Surgical Department</p>
+              </div>
+              <div class="doctor-card">
+                <img
+                  src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_640.png"
+                  alt="Benjamin Harris"
+                />
+                <h3>Benjamin Harris</h3>
+                <p>Medical Department</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#doctorCarousel"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#doctorCarousel"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="section" id="testimonials" data-aos="fade-up">
+      <h2>Ý Kiến Khách Hàng</h2>
+      <div class="d-flex justify-content-center">
+        <div class="testimonial-card">
+          <p>
+            "Bệnh viện ABC đã mang lại cho tôi trải nghiệm y tế tuyệt vời. Đội
+            ngũ bác sĩ và nhân viên rất tận tình và chu đáo."
+          </p>
+          <p><strong>- Nguyễn Văn A</strong></p>
+        </div>
+        <div class="testimonial-card">
+          <p>
+            "Thiết bị y tế hiện đại cùng với các dịch vụ chăm sóc sức khỏe chất
+            lượng cao khiến tôi rất yên tâm."
+          </p>
+          <p><strong>- Trần Thị B</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tin Tức -->
+    <div class="section" id="news" data-aos="fade-up">
+      <h2>Tin Tức Mới Nhất</h2>
+      <div class="news">
+        <div class="news-item">
+          <h3>Khám Phá Công Nghệ Mới Trong Y Học</h3>
+          <p>
+            Chúng tôi vừa đưa vào sử dụng thiết bị y tế mới giúp cải thiện chẩn
+            đoán bệnh.
+          </p>
+        </div>
+        <div class="news-item">
+          <h3>Chương Trình Khuyến Mãi Đặc Biệt</h3>
+          <p>Giảm giá 20% cho các dịch vụ khám bệnh định kỳ trong tháng này.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Liên Hệ -->
+    <div class="section" id="contact" data-aos="fade-up">
+      <h2>Liên Hệ Chúng Tôi</h2>
+      <p>Địa chỉ: Số 1 Đại Cồ Việt, Quận Hai Bà Trưng, Thành phố Hà Nội</p>
+      <p>Điện thoại: (012) 345-6789</p>
+      <p>Email: contact@benhvienabc.vn</p>
+    </div>
+
+    <!-- Chân Trang -->
+    <div class="footer">
+      <p>&copy; 2024 Bệnh Viện ABC. Tất cả quyền được bảo lưu.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

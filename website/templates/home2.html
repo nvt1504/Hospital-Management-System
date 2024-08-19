@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Page</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/7V0KcTLcy+DaLvzmV0zPAaIS72U9tlWdT2yz3/y7wh1ZT2C"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='home2styles.css') }}"
+    />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark"
+      style="background-color: #003366; padding: 17px 57.5px"
+    >
+      <a
+        class="navbar-brand"
+        href="{{ url_for('views.home', user_id=current_user.user_id) }}"
+        >
+        <img
+          src="../static/logo_hospital.png"
+          alt="Logo"
+          style="height: 50px"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse ml-auto" id="navbar">
+        <div class="navbar-nav ml-auto">
+          {% if user.is_authenticated %}
+          <a
+            class="nav-item nav-link"
+            id="home"
+            href="{{ url_for('views.home', user_id=current_user.user_id) }}"
+            style="color: #ffffff; font-size: 18px"
+            >Home</a
+          >
+          <a
+            class="nav-item nav-link"
+            id="logout"
+            href="{{ url_for('views.homepage', user_id=current_user.user_id) }}"
+            style="color: #ffffff; font-size: 18px"
+            >Logout</a
+          >
+          {% else %}
+          <a
+            class="nav-item nav-link"
+            id="login"
+            href="/login"
+            style="color: #ffffff; font-size: 18px"
+            >Login</a
+          >
+          <a
+            class="nav-item nav-link"
+            id="signUp"
+            href="/sign-up"
+            style="color: #ffffff; font-size: 18px"
+            >Sign Up</a
+          >
+          {% endif %}
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="profile-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVNOKUiWLaZcingTPdF60ReM4hJ1-txGxmTw&s"
+              alt="Profile Picture"
+            />
+            <h3>{{ user.name }}</h3>
+            <p>Khoa: {{ department_name }}</p>
+            <div class="contact-info mt-4">
+              <h5>THÔNG TIN LIÊN HỆ</h5>
+              <p>
+                <i class="far fa-calendar-alt"></i>Ngày sinh: {{ user.dob }}
+              </p>
+              <p><i class="fas fa-venus-mars"></i>Giới tính: {{ user.sex }}</p>
+              <p><i class="fas fa-phone-alt"></i>SĐT: {{ user.phone }}</p>
+              <p>
+                <i class="fas fa-map-marker-alt"></i>Địa chỉ: {{ user.address }}
+              </p>
+              <p><i class="fas fa-map-marker-alt"></i>Vai trò: Bác sĩ</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="education">
+            <h5>HỌC VẤN</h5>
+            <p><strong>9/2013 - 07/2019:</strong> Đại học Y dược Cần Thơ</p>
+            <p>Chuyên ngành: Bác sĩ đa khoa</p>
+          </div>
+          <div class="activities">
+            <h5>HOẠT ĐỘNG</h5>
+            <ul>
+              <li>
+                <strong>Ban liên lạc sinh viên (9/2013 - 07/2017):</strong>
+                <span
+                  >- Kết nối và hỗ trợ các bạn đồng hương về phương pháp, tài
+                  liệu học tập và công việc làm thêm.</span
+                >
+                <span
+                  >- Tìm kiếm nguồn quỹ hoạt động, tổ chức các hoạt động ngoại
+                  khóa kết nối với tỉnh nhà.</span
+                >
+              </li>
+              <li>
+                <strong>Tiếp sức mùa thi (6/2014 - 07/2017):</strong>
+                <span
+                  >- Tìm nhà trọ và hướng dẫn, hỗ trợ các thí sinh trong suốt
+                  mùa thi.</span
+                >
+              </li>
+              <li>
+                <strong>Cấp phát thuốc miễn phí (8/2014 - 07/2019):</strong>
+                <span
+                  >- Chuẩn bị công tác hậu cần gồm thuốc, địa điểm, trang thiết
+                  bị,...</span
+                >
+                <span
+                  >- Tham gia hỗ trợ các bác sĩ trong quá trình khám bệnh.</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="service-box">
+      <h5>Service Box</h5>
+      <div class="d-flex justify-content-between">
+        <a href="{{ url_for('views.calendar')}}" class="btn btn-custom"
+          >Lịch khám</a
+        >
+        <a href="#" class="btn btn-custom">Hoá đơn</a>
+        <a
+          href="{{ url_for('views.examination_history', user_id=current_user.user_id) }}"
+          class="btn btn-custom"
+          >Lịch sử khám bệnh</a
+        >
+      </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </body>
+</html>

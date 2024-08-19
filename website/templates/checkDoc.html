@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctors</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='checkDoc.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="profile">
+          <img
+            src="https://png.pngtree.com/png-vector/20190223/ourlarge/pngtree-admin-rolls-glyph-black-icon-png-image_691507.jpg"
+            alt="Profile Picture"
+          />
+          <p>Username: <strong>Admin</strong></p>
+          <p>Admin ID: <strong>2</strong></p>
+        </div>
+        <nav class="nav">
+          <ul>
+            <li>
+              <a
+                href="{{ url_for('views.admin', user_id=current_user.user_id) }}"
+                >Dashboard</a
+              >
+            </li>
+            <li><a href="{{ url_for('views.check_doc') }}">Doctors</a></li>
+            <li><a href="{{ url_for('views.check_patient') }}">Patients</a></li>
+            <li><a href="{{ url_for('views.payment') }}">Payments</a></li>
+          </ul>
+        </nav>
+        <div class="footer-image">
+          <img src="../static/logo_hospital.png" alt="Footer Image" />
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content">
+        <header class="header">
+          <div class="date-time">
+            <p>{{ today.strftime('%d/%m/%Y %I:%M:%S %p') }}</p>
+          </div>
+          <div class="logout">
+            <a class="logout-button" href="/logout">Logout</a>
+            <span>Welcome, <strong>Admin</strong></span>
+            <div class="status-dot"></div>
+            <span>Active</span>
+          </div>
+        </header>
+
+        <!-- Doctors Table -->
+        <div class="doctors-section">
+          <h3>Doctors List</h3>
+          <div class="doctors-table-inside">
+            <table>
+              <thead>
+                <tr>
+                  <th>User ID</th>
+                  <th>Name</th>
+                  <th>Date of Birth</th>
+                  <th>Sex</th>
+                  <th>Phone</th>
+                  <th>Address</th>
+                  <th>Department ID</th>
+                  <th>Department Name</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for doctor in doctors %}
+                <tr>
+                  <td>{{ doctor['user_id'] }}</td>
+                  <td>{{ doctor['name'] }}</td>
+                  <td>{{ doctor['dob'] }}</td>
+                  <td>{{ doctor['sex'] }}</td>
+                  <td>{{ doctor['phone'] }}</td>
+                  <td>{{ doctor['address'] }}</td>
+                  <td>{{ doctor['department_id'] }}</td>
+                  <td>{{ doctor['department_name'] }}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
