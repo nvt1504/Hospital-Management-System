@@ -24,7 +24,12 @@
         </div>
         <nav class="nav">
           <ul>
-            <li><a href="#">Dashboard</a></li>
+            <li>
+              <a
+                href="{{ url_for('views.admin', user_id=current_user.user_id) }}"
+                >Dashboard</a
+              >
+            </li>
             <li><a href="{{ url_for('views.check_doc') }}">Doctors</a></li>
             <li><a href="{{ url_for('views.check_patient') }}">Patients</a></li>
             <li><a href="{{ url_for('views.payment') }}">Payments</a></li>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trang Chủ - Bệnh Viện ABC</title>
+    <title>Home - ABC Hospital</title>
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='homepage.css') }}"
@@ -34,11 +34,11 @@
             class="nav-item nav-link"
             id="home"
             href="{{ url_for('views.homepage', user_id=current_user.user_id) }}"
-            >Trang chủ</a
+            >Home</a
           >
-          <a class="nav-item nav-link" href="#services">Dịch Vụ</a>
-          <a class="nav-item nav-link" href="#doctors">Đội Ngũ Bác Sĩ</a>
-          <a class="nav-item nav-link" href="#bookService">Đặt lịch khám</a>
+          <a class="nav-item nav-link" href="#services">Services</a>
+          <a class="nav-item nav-link" href="#doctors">Doctors</a>
+          <a class="nav-item nav-link" href="#bookService">Book Appointment</a>
         </nav>
         <div class="ml-2 d-flex align-items-center">
           {% if current_user.role == 1 %}
@@ -56,12 +56,10 @@
               alt="Logo"
               style="height: 100px; margin-left: 70px; margin-right: 4%"
             />
-          </a>  
+          </a>
           {% endif %}
           <div class="d-flex flex-column align-items-start">
-            <p class="mb-0 font-weight-bold" style="font-size: 1.25em">
-              Xin chào
-            </p>
+            <p class="mb-0 font-weight-bold" style="font-size: 1.25em">Hello</p>
             <p class="mb-0 font-weight-bold" style="font-size: 1.25em">
               {{ current_user.name }}
             </p>
@@ -70,38 +68,38 @@
       </div>
     </div>
 
-    <!-- Phần Hero -->
+    <!-- Hero Section -->
     <div class="hero" data-aos="fade-up">
-      <h1>Chào Mừng Đến Với Bệnh Viện ABC</h1>
-      <p>Chăm sóc sức khỏe hàng đầu cho bạn và gia đình</p>
-      <a href="#contact" class="cta-button">Đặt Lịch Khám Ngay</a>
+      <h1>Welcome to ABC Hospital</h1>
+      <p>Top-notch healthcare for you and your family</p>
+      <a href="#contact" class="cta-button">Book an Appointment Now</a>
     </div>
 
-    <!-- Giới thiệu -->
+    <!-- About Us -->
     <div class="section" id="about" data-aos="fade-up">
-      <h2>Về Chúng Tôi</h2>
+      <h2>About Us</h2>
       <p>
-        Bệnh viện ABC là một trong những cơ sở y tế hàng đầu, với đội ngũ bác sĩ
-        chuyên nghiệp và các trang thiết bị hiện đại. Chúng tôi cam kết mang đến
-        dịch vụ chăm sóc sức khỏe tốt nhất cho mọi bệnh nhân.
+        ABC Hospital is one of the leading healthcare facilities, with a
+        professional team of doctors and modern equipment. We are committed to
+        providing the best healthcare services to all patients.
       </p>
     </div>
 
-    <!-- Dịch Vụ -->
+    <!-- Services -->
     <div class="section" id="services" data-aos="fade-up">
-      <h2>Các Dịch Vụ Của Chúng Tôi</h2>
+      <h2>Our Services</h2>
       <div class="service-list">
-        <p>Khám và điều trị bệnh nội trú và ngoại trú</p>
-        <p>Phẫu thuật chuyên sâu</p>
-        <p>Khám sức khỏe định kỳ</p>
-        <p>Xét nghiệm y học hiện đại</p>
-        <p>Chăm sóc sức khỏe tại nhà</p>
+        <p>Inpatient and outpatient treatment</p>
+        <p>Advanced surgeries</p>
+        <p>Regular health check-ups</p>
+        <p>Modern medical testing</p>
+        <p>Home healthcare</p>
       </div>
     </div>
 
-    <!-- Đội Ngũ Bác Sĩ -->
+    <!-- Doctors -->
     <div class="section" id="doctors" data-aos="fade-up">
-      <h2>Đội Ngũ Bác Sĩ</h2>
+      <h2>Our Doctors</h2>
       <div id="doctorCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -172,54 +170,53 @@
 
     <!-- Testimonials -->
     <div class="section" id="testimonials" data-aos="fade-up">
-      <h2>Ý Kiến Khách Hàng</h2>
+      <h2>Customer Feedback</h2>
       <div class="d-flex justify-content-center">
         <div class="testimonial-card">
           <p>
-            "Bệnh viện ABC đã mang lại cho tôi trải nghiệm y tế tuyệt vời. Đội
-            ngũ bác sĩ và nhân viên rất tận tình và chu đáo."
+            "ABC Hospital provided me with an excellent medical experience. The
+            doctors and staff are very dedicated and caring."
           </p>
-          <p><strong>- Nguyễn Văn A</strong></p>
+          <p><strong>- Nguyen Van A</strong></p>
         </div>
         <div class="testimonial-card">
           <p>
-            "Thiết bị y tế hiện đại cùng với các dịch vụ chăm sóc sức khỏe chất
-            lượng cao khiến tôi rất yên tâm."
+            "The modern medical equipment and high-quality healthcare services
+            make me feel very secure."
           </p>
-          <p><strong>- Trần Thị B</strong></p>
+          <p><strong>- Tran Thi B</strong></p>
         </div>
       </div>
     </div>
 
-    <!-- Tin Tức -->
+    <!-- News -->
     <div class="section" id="news" data-aos="fade-up">
-      <h2>Tin Tức Mới Nhất</h2>
+      <h2>Latest News</h2>
       <div class="news">
         <div class="news-item">
-          <h3>Khám Phá Công Nghệ Mới Trong Y Học</h3>
+          <h3>Explore New Technology in Medicine</h3>
           <p>
-            Chúng tôi vừa đưa vào sử dụng thiết bị y tế mới giúp cải thiện chẩn
-            đoán bệnh.
+            We have just introduced new medical equipment to improve diagnosis.
           </p>
         </div>
         <div class="news-item">
-          <h3>Chương Trình Khuyến Mãi Đặc Biệt</h3>
-          <p>Giảm giá 20% cho các dịch vụ khám bệnh định kỳ trong tháng này.</p>
+          <h3>Special Promotion Program</h3>
+          <p>20% discount on regular health check-up services this month.</p>
         </div>
       </div>
     </div>
 
-    <!-- Liên Hệ -->
+    <!-- Contact Us -->
     <div class="section" id="contact" data-aos="fade-up">
-      <h2>Liên Hệ Chúng Tôi</h2>
-      <p>Địa chỉ: Số 1 Đại Cồ Việt, Quận Hai Bà Trưng, Thành phố Hà Nội</p>
-      <p>Điện thoại: (012) 345-6789</p>
-      <p>Email: contact@benhvienabc.vn</p>
+      <h2>Contact Us</h2>
+      <p>Address: 1 Dai Co Viet, Hai Ba Trung District, Hanoi City</p>
+      <p>Phone: (012) 345-6789</p>
+      <p>Email: contact@abc-hospital.vn</p>
     </div>
 
-    <!-- Chân Trang -->
+    <!-- Footer -->
     <div class="footer">
-      <p>&copy; 2024 Bệnh Viện ABC. Tất cả quyền được bảo lưu.</p>
+      <p>&copy; 2024 ABC Hospital. All rights reserved.</p>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -230,5 +227,54 @@
     <script>
       AOS.init();
     </script>
+    <div class="container">
+      <div class="chatbox">
+        <div class="chatbox__support">
+          <div class="chatbox__header">
+            <div class="chatbox__image--header">
+              <img
+                src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png"
+                alt="image"
+              />
+            </div>
+            <div class="chatbox__content--header">
+              <h4 class="chatbox__heading--header">Chat Support</h4>
+              <p class="chatbox__description--header">
+                Hi. My name is Sam. How can I help you?
+              </p>
+            </div>
+          </div>
+          <div class="chatbox__messages">
+            <div></div>
+          </div>
+          <div class="chatbox__footer">
+            <input type="text" placeholder="Write a message..." />
+            <button class="chatbox__send--footer send__button">Send</button>
+          </div>
+        </div>
+        <div class="chatbox__button">
+          <button>
+            <img src="{{ url_for('static', filename='chatbox-icon.svg') }}" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $SCRIPT_ROOT = {{ request.script_root|tojson }};
+    </script>
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='app.js') }}"
+    ></script>
+    <style>
+      /* CSS for chatbox */
+      .chatbox {
+        position: fixed;
+        bottom: 20px; /* Distance from the bottom of the browser window */
+        right: 20px; /* Distance from the right edge of the browser window */
+        z-index: 1000; /* Ensure this element is on top of others */
+      }
+    </style>
   </body>
 </html>

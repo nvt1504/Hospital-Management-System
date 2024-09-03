@@ -1,0 +1,334 @@
+{
+    "intents": [
+      {
+        "tag": "appointment",
+        "patterns": [
+          "How can I make an appointment with a doctor?",
+          "What should I do to schedule an appointment?",
+          "How do I book an appointment with a doctor?",
+          "How can I change my appointment?",
+          "What if I need to cancel my appointment?"
+        ],
+        "responses": [
+          "You can make an appointment by phone or through our website. If you need assistance, please contact the reception department.",
+          "To schedule an appointment, you can either call us or use our online booking service. We are here to help.",
+          "To change your appointment, please contact the hospital's reception department directly by phone or submit a change request through our website. Make sure to notify us as soon as possible to avoid cancellation fees."
+        ]
+      },
+      {
+        "tag": "hospital_hours",
+        "patterns": [
+          "Is your hospital open on weekends?",
+          "Do you operate on weekends?",
+          "What are the hospital’s working hours?",
+          "Are you open during public holidays?",
+          "What time can I visit the clinic?"
+        ],
+        "responses": [
+          "Yes, our hospital operates 24/7 to serve you. Clinic hours may vary, so please check with the reception department.",
+          "We are open 24 hours a day, 7 days a week. Clinic hours might be different. Please verify with the specific clinic or department."
+        ]
+      },
+      {
+        "tag": "specialties",
+        "patterns": [
+          "What specialties does your hospital offer?",
+          "What medical specialties are available at your hospital?",
+          "Which specialties are provided at the hospital?",
+          "Can you list the medical specialties available here?",
+          "Do you offer specialized medical services?"
+        ],
+        "responses": [
+          "We offer services in various specialties, including Internal Medicine, Surgery, Obstetrics, Pediatrics, and more. Please check our website for more details.",
+          "Our hospital provides a range of specialties, such as Internal Medicine, Surgery, Obstetrics, Pediatrics, and additional specialties. You can find more information on our website or contact us directly."
+        ]
+      },
+      {
+        "tag": "insurance",
+        "patterns": [
+          "Does your hospital accept insurance?",
+          "Do you take health insurance?",
+          "What insurance plans are accepted at the hospital?",
+          "Can I use my insurance at your hospital?",
+          "How can I verify my insurance coverage?"
+        ],
+        "responses": [
+          "We accept many types of health insurance. Please contact the billing department to verify your insurance coverage.",
+          "We work with various insurance companies. Contact us to check if your insurance plan is accepted and get assistance with your insurance needs."
+        ]
+      },
+      {
+        "tag": "payment_methods",
+        "patterns": [
+          "What payment methods are accepted at the hospital?",
+          "How can I pay for services at the hospital?",
+          "What forms of payment do you accept?",
+          "Can I pay using a credit card?",
+          "What are the payment options available?"
+        ],
+        "responses": [
+          "We accept cash, credit cards, and bank transfers for payment.",
+          "You can pay using cash, credit card, or bank transfer. If you have specific payment requirements, please contact our finance department for assistance."
+        ]
+      },
+      {
+        "tag": "emergency",
+        "patterns": [
+          "What should I do in case of an emergency?",
+          "What is the procedure for emergencies?",
+          "How should I handle an emergency situation?",
+          "What is the emergency number for the hospital?",
+          "Is there an emergency room available?"
+        ],
+        "responses": [
+          "If you have an emergency, please call the hospital's emergency number immediately or go to the emergency room right away.",
+          "In case of an emergency, call our emergency hotline or come directly to the emergency department. We are equipped to handle urgent situations 24/7."
+        ]
+      },
+      {
+        "tag": "billing_inquiries",
+        "patterns": [
+          "Who can I contact about questions on my bill?",
+          "How do I get help with billing questions?",
+          "Where can I ask about my invoice?",
+          "I have a question about my hospital bill. Whom should I contact?",
+          "Can I get assistance with my billing issues?"
+        ],
+        "responses": [
+          "You can contact our billing department or customer support for inquiries about your bill.",
+          "For any billing questions, please reach out to our finance department or customer service. We are here to help with any billing-related issues."
+        ]
+      },
+      {
+        "tag": "mental_health",
+        "patterns": [
+          "Does the hospital offer mental health counseling?",
+          "Can I get psychological support at the hospital?",
+          "Is mental health support available at your facility?",
+          "Do you provide mental health services?",
+          "Can I see a counselor at the hospital?"
+        ],
+        "responses": [
+          "Yes, we offer mental health counseling and support services. Please contact the reception to schedule an appointment.",
+          "We provide mental health services including counseling and therapy. Contact us to arrange an appointment with a mental health professional."
+        ]
+      },
+      {
+        "tag": "symptoms",
+        "patterns": [
+          "I have pain and fever. What could be wrong?",
+          "I’m feeling fatigued and have a cough. What should I do?",
+          "I have a runny nose and sore throat. What might this indicate?",
+          "I'm experiencing headache and abdominal pain. What could be the cause?",
+          "I'm feeling nausea and diarrhea. What should I consider?",
+          "I have a rash and itching. What might be the problem?",
+          "I'm dealing with shortness of breath and chest pain. What could it be?",
+          "I'm having difficulty swallowing and dizziness. What could be the issue?",
+          "I'm experiencing confusion and memory loss. What could this mean?",
+          "I have anxiety and depression. What support is available?"
+        ],
+        "responses": [
+          "Pain and fever could indicate an infection or inflammation. It is advisable to consult with a doctor for a proper diagnosis.",
+          "Fatigue and cough might be symptoms of a respiratory infection or other conditions. Consider seeing a healthcare professional for evaluation.",
+          "A runny nose and sore throat are commonly associated with colds or allergies. If symptoms persist or worsen, consult a doctor.",
+          "Headache and abdominal pain could be caused by a variety of conditions. It is best to get a medical assessment to determine the cause.",
+          "Nausea and diarrhea may be related to gastrointestinal issues. If symptoms are severe or persistent, seek medical advice.",
+          "A rash and itching might indicate an allergic reaction or skin condition. Contact a dermatologist or healthcare provider for further evaluation.",
+          "Shortness of breath and chest pain could be symptoms of a serious condition like a respiratory or cardiovascular issue. Seek immediate medical attention.",
+          "Difficulty swallowing and dizziness can be signs of various health problems. It is important to consult with a healthcare provider for a thorough examination.",
+          "Confusion and memory loss could be related to neurological or psychological conditions. A healthcare professional should evaluate these symptoms.",
+          "Anxiety and depression are mental health conditions that can be managed with counseling and therapy. Reach out to a mental health professional for support."
+        ]
+      },
+      {
+        "tag": "departments",
+        "patterns": [
+          "Tell me about the Emergency Department.",
+          "What services does the Inpatient Department offer?",
+          "Can you provide details about the Outpatient Department?",
+          "What does the Surgical Department do?",
+          "What is included in the Medical Department?",
+          "What are the services in the Pediatric Department?",
+          "Tell me about the Obstetrics and Gynecology Department.",
+          "What services are available in the Mental Health Department?",
+          "Can you explain the Neurology Department's offerings?",
+          "What does the Rehabilitation Department provide?"
+        ],
+        "responses": [
+          "The Emergency Department (ED) handles urgent and life-threatening conditions 24/7. It provides immediate care for severe injuries, heart attacks, strokes, and other emergencies.",
+          "The Inpatient Department (IP) provides care for patients who need to stay in the hospital overnight or longer. This includes monitoring, treatment, and recovery for various conditions.",
+          "The Outpatient Department (OPD) offers services for patients who do not require overnight stays. This includes consultations, minor procedures, and follow-up visits.",
+          "The Surgical Department performs operations and surgical procedures. This includes elective surgeries, emergency surgeries, and specialized surgical care.",
+          "The Medical Department focuses on diagnosing and treating a wide range of medical conditions through internal medicine and specialized consultations.",
+          "The Pediatric Department provides medical care for children, from infants to adolescents. This includes routine check-ups, vaccinations, and treatment for childhood illnesses.",
+          "The Obstetrics and Gynecology Department handles women's health, including pregnancy, childbirth, and reproductive health issues. This department also offers gynecological exams and treatments.",
+          "The Mental Health Department offers support for mental health conditions such as anxiety, depression, and stress-related disorders. Services include counseling, therapy, and psychiatric care.",
+          "The Neurology Department specializes in diagnosing and treating neurological conditions, including disorders of the brain, spinal cord, and nerves.",
+          "The Rehabilitation Department provides therapy and support for patients recovering from injuries, surgeries, or medical conditions. This includes physical therapy, occupational therapy, and speech therapy."
+        ]
+      },
+      {
+        "tag": "visitor_information",
+        "patterns": [
+          "What are the visiting hours for patients?",
+          "Can I visit my friend in the hospital?",
+          "Are there any restrictions on visiting patients?",
+          "Do you have any rules for visitors?",
+          "Can children visit patients in the hospital?"
+        ],
+        "responses": [
+          "Visiting hours vary by department. Generally, visitors are allowed from 10 AM to 8 PM, but it is best to check with the specific department.",
+          "You can visit patients during designated visiting hours. Please check with the hospital's reception for any restrictions or special instructions.",
+          "Due to safety protocols, visiting hours may be limited, and some departments might have additional restrictions. Please contact the hospital for the latest information.",
+          "Visitors are expected to follow hospital rules to ensure patient safety and comfort. This includes wearing masks, hand sanitizing, and adhering to visiting hours.",
+          "Children may visit patients, but there may be age restrictions in certain departments. Please inquire with the hospital for more details."
+        ]
+      },
+      {
+        "tag": "prescriptions",
+        "patterns": [
+          "How do I refill my prescription?",
+          "Can I get a prescription refill over the phone?",
+          "What do I need to do to renew my medication?",
+          "How can I get my prescription filled at the hospital?",
+          "Do you offer online prescription refill services?"
+        ],
+        "responses": [
+          "To refill a prescription, please contact the pharmacy directly or use our online refill service if available.",
+          "Prescription refills can often be handled over the phone. Please call the pharmacy with your prescription details.",
+          "To renew your medication, please visit your healthcare provider for a review. They can provide a new prescription if needed.",
+          "Prescriptions can be filled at our hospital pharmacy during normal operating hours. Please bring your prescription with you.",
+          "We offer an online prescription refill service for convenience. Please visit our website and follow the instructions for refills."
+        ]
+      },
+      {
+        "tag": "patient_rights",
+        "patterns": [
+          "What are my rights as a patient?",
+          "Do patients have a right to privacy?",
+          "Can I request a second opinion?",
+          "Are patients allowed to refuse treatment?",
+          "What are the patient responsibilities at your hospital?"
+        ],
+        "responses": [
+          "As a patient, you have the right to receive respectful care, privacy, and information about your treatment. You can also request a second opinion or refuse treatment.",
+          "Patient privacy is a top priority. Your medical information is kept confidential, and you have the right to discuss your care only with those you choose.",
+          "Yes, you can request a second opinion from another healthcare provider. We support your right to make informed decisions about your care.",
+          "Patients have the right to refuse any treatment, but it is important to discuss your concerns with your healthcare provider to understand the implications.",
+          "Patients are responsible for providing accurate health information, following prescribed treatment plans, and respecting hospital rules and other patients' privacy."
+        ]
+      },
+      {
+        "tag": "dietary_services",
+        "patterns": [
+          "Do you offer meals for patients with special dietary needs?",
+          "Can you accommodate vegetarian or vegan diets?",
+          "Is there a menu for patients to choose from?",
+          "What food options are available for inpatients?",
+          "Are meals included in the hospital stay?"
+        ],
+        "responses": [
+          "Yes, we offer meals for patients with special dietary needs, including vegetarian, vegan, gluten-free, and other restrictions.",
+          "Our dietary services team can accommodate various dietary preferences, including vegetarian and vegan options. Please inform your healthcare provider of any specific needs.",
+          "Patients can choose from a menu that includes various meal options to suit different tastes and dietary requirements.",
+          "Inpatients receive three meals a day, with options tailored to their medical and dietary needs.",
+          "Meals are included in the cost of the hospital stay, and our staff works to ensure that dietary needs are met."
+        ]
+      },
+      {
+        "tag": "transportation_services",
+        "patterns": [
+          "Does the hospital provide transportation services?",
+          "How can I arrange for hospital transport?",
+          "Is there a shuttle service available?",
+          "Can you help with transportation to and from the hospital?",
+          "Do you have any partnerships with taxi or ride-sharing services?"
+        ],
+        "responses": [
+          "Yes, we provide transportation services for patients who need assistance getting to and from the hospital. Please contact the reception for more details.",
+          "To arrange hospital transport, please call our transportation services department. They can assist with scheduling a ride.",
+          "We offer a shuttle service for patients and visitors. Please check the schedule at the reception or on our website.",
+          "If you need help with transportation, please let us know. We can coordinate with local taxi services or ride-sharing companies to assist you.",
+          "We have partnerships with several transportation services to offer discounted rates for our patients. Please inquire at the reception for more information."
+        ]
+      },
+      {
+        "tag": "follow_up_care",
+        "patterns": [
+          "How do I schedule a follow-up appointment?",
+          "What should I do after being discharged?",
+          "Do I need to see a doctor after my hospital stay?",
+          "What are the steps for follow-up care?",
+          "How do I know if I need follow-up care?"
+        ],
+        "responses": [
+          "To schedule a follow-up appointment, please contact the clinic or department directly. You can also book online through our website.",
+          "After being discharged, follow your doctor's instructions for care at home. This may include taking prescribed medications, resting, and scheduling follow-up appointments.",
+          "It is often necessary to see a doctor after a hospital stay to ensure proper recovery. Your healthcare provider will advise you on the appropriate follow-up care.",
+          "Follow-up care steps include scheduling appointments, monitoring your health, and following any treatment plans or medication regimens prescribed by your doctor.",
+          "Your doctor will inform you if follow-up care is necessary. It is important to attend all scheduled appointments and follow medical advice for the best recovery outcome."
+        ]
+      },
+      {
+        "tag": "pharmacy_services",
+        "patterns": [
+          "Do you have a pharmacy in the hospital?",
+          "Can I get my prescription filled at your pharmacy?",
+          "What are the operating hours of the hospital pharmacy?",
+          "Do you offer over-the-counter medications at the pharmacy?",
+          "Can the pharmacy provide medication counseling?"
+        ],
+        "responses": [
+          "Yes, we have a pharmacy located within the hospital for your convenience.",
+          "You can get your prescription filled at our hospital pharmacy during regular operating hours.",
+          "The hospital pharmacy is open from 8 AM to 8 PM, Monday through Saturday. Please check with the pharmacy for specific holiday hours.",
+          "Our pharmacy offers a variety of over-the-counter medications and medical supplies for your needs.",
+          "Our pharmacists are available to provide medication counseling and answer any questions you have about your prescriptions."
+        ]
+      },
+      {
+        "tag": "greeting",
+        "patterns": [
+          "Hi",
+          "Hey",
+          "How are you",
+          "Is anyone there?",
+          "Hello",
+          "Good day"
+        ],
+        "responses": [
+          "Hey :-)",
+          "Hello, thanks for visiting",
+          "Hi there, what can I do for you?",
+          "Hi there, how can I help?"
+        ]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["Bye", "See you later", "Goodbye"],
+        "responses": [
+          "See you later, thanks for visiting",
+          "Have a nice day",
+          "Bye! Come back again soon."
+        ]
+      },
+      {
+        "tag": "thanks",
+        "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+        "responses": ["Happy to help!", "Any time!", "My pleasure"]
+      },
+      {
+        "tag": "funny",
+        "patterns": [
+          "Tell me a joke!",
+          "Tell me something funny!",
+          "Do you know a joke?"
+        ],
+        "responses": [
+          "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
+          "What did the buffalo say when his son left for college? Bison."
+        ]
+      }
+    ]
+  }
+  

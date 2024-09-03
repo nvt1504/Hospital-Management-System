@@ -1,11 +1,11 @@
 from sqlalchemy import extract
-from flask import Blueprint, render_template, redirect, url_for
+from flask import Blueprint, render_template, redirect, url_for, request, jsonify
 from flask_login import login_required, current_user
 from .models import Doctor, db, Patient, Examination
 from sqlalchemy import text, func
 import datetime
 from datetime import date
-
+from chat import get_response
 
 views = Blueprint('views', __name__)
 
@@ -293,3 +293,13 @@ def payment():
         revenue_data=[revenue_dict[month] for month in months],
         profit_loss_data=profit_loss_data
     )
+
+
+#------------------------CHAT BOT----------------------------
+@views.post("/predict")
+def predict():
+    text = request.get_json().get("message")
+    # TODO: check if valid
+    response = get_response(text)
+    message = {"answer": response}
+    return jsonify(message)
